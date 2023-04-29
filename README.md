@@ -21,7 +21,7 @@ TOKEN=your_discord_bot_token
 DETECTLANGUAGE_API_KEY=your_detectlanguage_api_key
 ```
 
-4. Replace `your_discord_bot_token` with your Discord bot token, `your_detectlanguage_api_key` with your DetectLanguage API key, and `path/to/your/google/cloud/api/key.json` with the file path to your Google Cloud API key.
+4. Replace `your_discord_bot_token` with your Discord bot token, `your_detectlanguage_api_key` with your DetectLanguage API key [DetectLangAPI](https://detectlanguage.com)
 5. Run `npm start` to start the application.
 
 ## Usage
