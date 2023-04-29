@@ -8,7 +8,7 @@ To use this application, you will need the following:
 
 - A Discord bot token [Discord dev portal](https://discord.com/developers/applications)
 - A Discord server where you have permission to add bots
-- A DetectLanguage API key [DetectLangAPI](https://detectlanguage.com)
+- A DetectLanguage API key [DetectLangAPI](https://detectlanguage.com) # dont worry its free
 
 ## Installation
 
@@ -21,7 +21,7 @@ TOKEN=your_discord_bot_token
 DETECTLANGUAGE_API_KEY=your_detectlanguage_api_key
 ```
 
-4. Replace `your_discord_bot_token` with your [Discord bot token](https://discord.com/developers/applications), `your_detectlanguage_api_key` with your DetectLanguage API key [DetectLangAPI](https://detectlanguage.com)
+4. Replace `your_discord_bot_token` with your [Discord bot token](https://discord.com/developers/applications), `your_detectlanguage_api_key` with your [DetectLanguage API key](https://detectlanguage.com)
 5. Run `npm start` to start the application.
 
 ## Usage
