@@ -8,7 +8,7 @@ To use this application, you will need the following:
 
 - A Discord account
 - A Discord server where you have permission to add bots
-- A DetectLanguage API key (DetectLangAPI)[https://detectlanguage.com]
+- A DetectLanguage API key [DetectLangAPI](https://detectlanguage.com)
 
 ## Installation
 
