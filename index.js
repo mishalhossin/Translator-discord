@@ -1,11 +1,11 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
 app.get('/', function (req, res) {
-  res.send('Keep alive')
-})
+  res.send('Keep alive');
+});
 
-app.listen(3000)
+app.listen(3000);
 
 const dotenv = require('dotenv');
 const Discord = require('discord.js');
@@ -27,18 +27,18 @@ client.on('ready', () => {
 client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
 
-  // Ignore messages with a single word
-  if (message.content.split(' ').length === 1) return;
+  // Remove emojis from the message content
+  const contentWithoutEmojis = message.content.replace(/:[a-zA-Z]+:/g, '');
 
-  // Ignore messages containing emojis like :skull:
-  if (message.content.match(/:[a-zA-Z]+:/)) return;
+  // Ignore messages with a single word or without any content after removing emojis
+  if (contentWithoutEmojis.split(' ').length === 1 || !contentWithoutEmojis.trim()) return;
 
   try {
-    const result = await detectLanguageClient.detect(message.content);
+    const result = await detectLanguageClient.detect(contentWithoutEmojis);
     const detectedSourceLanguage = result[0].language;
 
     if (detectedSourceLanguage !== 'en') {
-      const { text } = await translate(message.content, { to: 'en' });
+      const { text } = await translate(contentWithoutEmojis, { to: 'en' });
       message.channel.send(`\`${message.author.username} said:\` ${text}`);
     }
   } catch (error) {
